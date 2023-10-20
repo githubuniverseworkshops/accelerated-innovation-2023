@@ -1,0 +1,10 @@
+{
+    "delay": 2000,
+    "watch": [ "." ],
+    "ext": "ts,js,mts,mjs",
+    "execMap":
+    {
+        "ts": "ts-node --esm",
+        "mts": "ts-node --esm"
+    }
+}

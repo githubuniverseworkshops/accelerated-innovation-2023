@@ -1,0 +1,54 @@
+{
+  "version": "2.0.0",
+  "presentation": {
+    "echo": true,
+    "reveal": "always",
+    "focus": false,
+    "panel": "dedicated",
+    "showReuseMessage": true
+  },
+  "tasks": [
+    {
+      "label": "Serve",
+      "type": "npm",
+      "script": "start",
+      // Mark as a background task to avoid the spinner animation on the terminal tab
+      "isBackground": true,
+      "problemMatcher": [],
+      // Create the tasks in a terminal group
+      "presentation": {
+        "group": "debug",
+        "revealProblems": "onProblem",
+        "panel": "dedicated"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}/src"
+      },
+      "runOptions": {
+        "runOn": "default"
+      }
+    },
+    {
+      "label": "Watch",
+      "type": "npm",
+      "script": "watch",
+      // Mark as a background task to avoid the spinner animation on the terminal tab
+      "isBackground": true,
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
+      // Create the tasks in a terminal group
+      "presentation": {
+        "group": "debug",
+        "revealProblems": "onProblem",
+        "panel": "dedicated"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}/src"
+      },
+      "runOptions": {
+        "runOn": "default"
+      }
+    }
+  ]
+}

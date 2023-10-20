@@ -1,0 +1,6 @@
+* text=auto
+
+*.sh text eol=lf
+*.[Bb][Aa][Tt] text eol=crlf
+*.[Cc][Mm][Dd] text eol=crlf
+*.gif binary

@@ -1,0 +1,41 @@
+name: Package
+
+on:
+  push:
+      branches:
+        - main
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    name: Create package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: src/.nvmrc
+          cache: npm
+          cache-dependency-path: src/package-lock.json
+      - name: Setup NPM
+        working-directory: ${{ github.workspace }}/src
+        run: npm install -g npm@latest
+      - name: Install dependencies
+        working-directory: ${{ github.workspace }}/src
+        run: npm ci
+      - name: Run tests
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          npm test
+      - name: Package
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          npm run package        
+      - name: Store Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: package
+          path: ${{ github.workspace }}/src/publish/package.zip
