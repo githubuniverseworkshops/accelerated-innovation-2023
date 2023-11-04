@@ -23,7 +23,7 @@ In this workshop, you will:
 
 ## :mega: Prerequisites
 
-To participate in the workshop you need a GitHub account and need to be invited to the workshop organization [GithHub Universe Workshops](https://github.com/githubuniverseworkshops).
+To participate in the workshop, you will need a **public** GitHub account, and this account will need to be invited to the workshop organization [GithHub Universe Workshops](https://github.com/githubuniverseworkshops). EMU accounts (which contain an underscore, `_`) cannot be used for this workshop.
 
 ## :books: Resources
 
