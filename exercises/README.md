@@ -276,6 +276,7 @@ In this exercise, you'll create a GitHub Action that will build and test the pro
      package:
        runs-on: ubuntu-latest
        steps:
+         - name: Create package
          - uses: actions/checkout@v4
          - name: Setup Node
            uses: actions/setup-node@v3
