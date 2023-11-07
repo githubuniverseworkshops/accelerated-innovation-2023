@@ -27,6 +27,8 @@ To participate in the workshop, you will need a **public** GitHub account, and t
 
 ## :books: Resources
 
+- [Public roadmap](https://github.com/github/roadmap)
+
 ### GitHub Codespaces and Dev Containers
 
 - [GitHub Codespaces overview](https://docs.github.com/en/codespaces/overview)
